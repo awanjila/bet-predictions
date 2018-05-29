@@ -2,11 +2,13 @@
 {% load render_table from django_tables2 %}
 <!doctype html>
 <html>
-    <head>
-        <title>Tips</title>
+     <head>
+        <title>List of persons</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     </head>
     <body>
-        {% render_table true_odds %}
+    	<h1>Todays Odds</h1>
+        {% render_table table %}
     </body>
 </html>
 

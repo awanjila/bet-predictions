@@ -5,6 +5,8 @@ from django.shortcuts import render
 from django.views.generic import TemplateView,  ListView
 from django.http import HttpResponse
 from .models import TrueOdds
+from .tables import TrueOddsTable
+from django_tables2 import RequestConfig
 
 # Create your views here.
 """
@@ -18,4 +20,6 @@ class AboutView(TemplateView):
 	template_name='true_odds/about.html'
 """
 def true_odds(request):
-	return render(request, 'true_odds/index.html', {'true_odds':TrueOdds.objects.all()})
+	table=TrueOddsTable(TrueOdds.objects.all())
+	RequestConfig(request).configure(table)
+	return render(request, 'true_odds/index.html', {'table':table})
