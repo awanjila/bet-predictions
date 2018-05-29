@@ -1,0 +1,22 @@
+
+
+{% block title %}
+<title> Home </title>
+{% endblock %}
+{%block body %}
+<div class="container">
+{% for tips in object_list %}
+<h1>Country</h1>
+<p>{{tips.country}}</p>
+
+<h1>Flags</h1>
+<p>{{tips.flags}}</p>
+<h1>Home</h1>
+<p>{{tips.home_team}}</p>
+<h1>Away</h1>
+<p>{{tips.away_team}}</p>
+<h1>Tip</h1>
+<p>{{tips.tips }}</p>
+	{% endfor %}
+</div>
+{% endblock%}

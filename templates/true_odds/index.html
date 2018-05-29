@@ -1,0 +1,20 @@
+{% extends 'true_odds/base.html'%}
+{% block title %}
+<title> Home </title>
+{% endblock %}
+{%block body %}
+<div class="container">
+{% for tips in object_list %}
+<h1>Country</h1>
+<p>{{tips.country}}</p>
+<h1>Flag</h1>
+<p>{{tips.flags}}</p>
+<h1>Home Team</h1>
+<p>{{tips.home_team}}</p>
+<h1>Away Team</h1>
+<p>{{tips.away_team}}</p>
+<h1>Tips</h1>
+<h1>{{tips.tips }}</h1>
+	{% endfor %}
+</div>
+{% endblock%}
