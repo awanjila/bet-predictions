@@ -13,7 +13,7 @@ class TrueOdds(models.Model):
 	home_team=models.CharField(max_length=200)
 	away_team=models.CharField(max_length=200)
 	tips=models.CharField(max_length=200)
-	date_created=models.DateField()
+
 
 	def __str__(self):
 		return self.tips
