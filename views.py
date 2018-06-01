@@ -18,8 +18,18 @@ class Indexview(ListView):
 
 class AboutView(TemplateView):
 	template_name='true_odds/about.html'
+
 """
+def sort_by_tips(request):
+	table=TrueOddsTable(TrueOdds.objects.filter(tips='OV25'))
+	RequestConfig(request).configure(table)
+	return render(request, 'true_odds/sort_by_id.html', {'table':table})
+
 def true_odds(request):
 	table=TrueOddsTable(TrueOdds.objects.all())
 	RequestConfig(request).configure(table)
 	return render(request, 'true_odds/index.html', {'table':table})
+
+
+
+
