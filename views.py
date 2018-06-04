@@ -21,7 +21,7 @@ class AboutView(TemplateView):
 
 """
 def sort_by_tips(request):
-	table=TrueOddsTable(TrueOdds.objects.filter(tips='OV25'))
+	table=TrueOddsTable(TrueOdds.objects.filter(tips='1'))
 	RequestConfig(request).configure(table)
 	return render(request, 'true_odds/sort_by_id.html', {'table':table})
 
@@ -32,4 +32,7 @@ def true_odds(request):
 
 
 
-
+'''
+objects.values('Category').distinct()
+objects.all()
+'''

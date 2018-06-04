@@ -1,15 +1,15 @@
-{% extends 'true_odds/base.html'%}
+{% extends 'true_odds/base.html' %}
 {% load render_table from django_tables2 %}
 <!doctype html>
 <html>
+{% block content %}
      <head>
-        <title>Tips</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     </head>
     <body>
-    	<h1>Todays Odds</h1>
+    	<h1>Todays Tips</h1>
         {% render_table table %}
 
-      
+{% endblock %}      
 </html>
 
